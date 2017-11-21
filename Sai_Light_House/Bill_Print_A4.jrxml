@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
-<!-- 2017-11-18T21:04:40 -->
+<!-- 2017-11-21T10:20:00 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Bill_Print_A4" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4eedbb89-b4f6-4469-9ab6-f642a1688cf7">
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
 	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
@@ -136,27 +136,12 @@
 	<field name="DiscountAmount" class="java.lang.String"/>
 	<field name="MRP" class="java.lang.String"/>
 	<field name="DiscountPer" class="java.lang.String"/>
+	<field name="SrNo" class="java.lang.String"/>
 	<group name="Gruppo1">
-		<groupExpression><![CDATA[(int)($V{REPORT_COUNT}/15)]]></groupExpression>
 		<groupFooter>
-			<band>
-				<property name="local_mesure_unitheight" value="pixel"/>
-				<property name="com.jaspersoft.studio.unit.height" value="px"/>
-			</band>
-			<band height="70">
+			<band height="134">
 				<staticText>
-					<reportElement x="1" y="0" width="46" height="16" uuid="da81ff16-10de-4791-9301-e1d6b284f169"/>
-					<box>
-						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-					</box>
-					<textElement textAlignment="Center"/>
-					<text><![CDATA[]]></text>
-				</staticText>
-				<staticText>
-					<reportElement x="47" y="0" width="234" height="16" uuid="2e69a3da-cb06-4ac0-9eb9-ef10150b749e"/>
+					<reportElement x="1" y="0" width="280" height="16" uuid="2e69a3da-cb06-4ac0-9eb9-ef10150b749e"/>
 					<box rightPadding="4">
 						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
@@ -205,7 +190,7 @@
 				</textField>
 				<textField>
 					<reportElement x="480" y="0" width="74" height="16" uuid="5c2ff7fc-feab-46b0-88e0-30ccfa9a13d6"/>
-					<box rightPadding="2">
+					<box rightPadding="4">
 						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
@@ -216,7 +201,7 @@
 				</textField>
 				<textField>
 					<reportElement x="415" y="32" width="139" height="16" uuid="df133fde-33ac-498a-b2b9-7ed37e5d1443"/>
-					<box rightPadding="2">
+					<box rightPadding="4">
 						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
@@ -227,7 +212,7 @@
 				</textField>
 				<textField>
 					<reportElement x="415" y="48" width="139" height="16" uuid="b25ab8a5-fb29-46df-b076-44e0089c0295"/>
-					<box rightPadding="2">
+					<box rightPadding="4">
 						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
@@ -251,7 +236,7 @@
 				</staticText>
 				<textField>
 					<reportElement x="415" y="16" width="139" height="16" uuid="84b09631-35c9-4fb7-b4cd-931563e1acf0"/>
-					<box leftPadding="0" rightPadding="2">
+					<box leftPadding="0" rightPadding="4">
 						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
@@ -282,19 +267,40 @@
 					<textElement textAlignment="Center"/>
 					<text><![CDATA[]]></text>
 				</staticText>
+				<staticText>
+					<reportElement x="1" y="16" width="280" height="48" uuid="96c17b79-52b8-4d20-9a32-83cdde33bd55"/>
+					<box rightPadding="4">
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Right">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="440" y="115" width="114" height="18" uuid="df239d00-084d-4fca-b371-ff4065176b62"/>
+					<text><![CDATA[Authorised Signatory]]></text>
+				</staticText>
+			</band>
+			<band>
+				<property name="local_mesure_unitheight" value="pixel"/>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			</band>
 		</groupFooter>
 	</group>
 	<background>
 		<band height="802">
 			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
-			<staticText>
-				<reportElement x="0" y="0" width="555" height="802" forecolor="#BDB7B7" uuid="e1d4ee13-29df-4918-92cb-be6349ffb69d"/>
+			<textField>
+				<reportElement x="0" y="0" width="555" height="802" forecolor="#CCCACA" uuid="2916b1cd-e74d-4684-8e9c-a39f6ddb1a7e"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="50" isBold="true"/>
+					<font size="53" isBold="true"/>
 				</textElement>
-				<text><![CDATA[OM Sai Electronics]]></text>
-			</staticText>
+				<textFieldExpression><![CDATA[$P{StoreName}]]></textFieldExpression>
+			</textField>
 		</band>
 	</background>
 	<title>
@@ -307,7 +313,7 @@
 				<textElement textAlignment="Right">
 					<font size="12" isBold="true"/>
 				</textElement>
-				<text><![CDATA[Bill To:]]></text>
+				<text><![CDATA[Bill To :]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="0" y="121" width="60" height="15" uuid="33274f5d-5b7e-4be2-a2ff-65d452a618ed"/>
@@ -319,6 +325,9 @@
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
+				<graphicElement>
+					<pen lineWidth="2.0" lineStyle="Solid"/>
+				</graphicElement>
 			</line>
 			<staticText>
 				<reportElement x="0" y="136" width="60" height="15" uuid="1d3045ed-03d6-4253-a959-aeeb491b73ca"/>
@@ -328,7 +337,9 @@
 			<staticText>
 				<reportElement x="415" y="1" width="50" height="20" uuid="0f86baff-6386-4f3f-b3fe-2388707babe8"/>
 				<box rightPadding="4"/>
-				<textElement textAlignment="Right"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
 				<text><![CDATA[Date :]]></text>
 			</staticText>
 			<textField pattern="dd/MM/yyyy">
@@ -342,19 +353,23 @@
 			<staticText>
 				<reportElement x="415" y="21" width="50" height="20" uuid="0b3f9342-da78-4cfa-9fc5-2301c4749678"/>
 				<box rightPadding="4"/>
-				<textElement textAlignment="Right"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
 				<text><![CDATA[Time :]]></text>
 			</staticText>
 			<textField>
 				<reportElement x="61" y="121" width="100" height="15" uuid="8d235ade-2d62-4e08-b56a-e81dac7a9ad2"/>
+				<box leftPadding="2"/>
 				<textFieldExpression><![CDATA[$F{CustName}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="61" y="136" width="100" height="15" uuid="67d6fd09-dbea-45af-ba7a-cceb6ad53967"/>
+				<box topPadding="0" leftPadding="2"/>
 				<textFieldExpression><![CDATA[$F{CustMobile}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="214" y="80" width="140" height="25" uuid="e5eaeb9d-88bc-457a-aef5-ec2dbde45a0f">
+				<reportElement x="214" y="85" width="140" height="25" uuid="e5eaeb9d-88bc-457a-aef5-ec2dbde45a0f">
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
@@ -366,17 +381,19 @@
 			<staticText>
 				<reportElement x="415" y="41" width="50" height="20" uuid="5d347ea6-c47d-4908-b9c0-438ca0764858"/>
 				<box rightPadding="4"/>
-				<textElement textAlignment="Right"/>
-				<text><![CDATA[Bill No :]]></text>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Invoice :]]></text>
 			</staticText>
 			<textField pattern="">
 				<reportElement x="465" y="41" width="84" height="20" uuid="72615b28-3e1d-4a24-a788-47d7848ecdb7"/>
 				<textFieldExpression><![CDATA[$F{BillNo}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="11" y="1" width="270" height="24" uuid="474f6bb1-bbce-480c-8270-3c400529be01"/>
-				<textElement>
-					<font size="18" isBold="true"/>
+				<reportElement x="137" y="1" width="270" height="24" uuid="474f6bb1-bbce-480c-8270-3c400529be01"/>
+				<textElement textAlignment="Center">
+					<font fontName="Cooper Black" size="18" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{StoreName}]]></textFieldExpression>
 			</textField>
@@ -392,6 +409,19 @@
 				<reportElement x="11" y="55" width="270" height="15" uuid="e3e9ba73-f935-4768-8ec3-2006ddcef0de"/>
 				<textFieldExpression><![CDATA[$P{MobileNumber}]]></textFieldExpression>
 			</textField>
+			<staticText>
+				<reportElement x="11" y="9" width="87" height="17" uuid="56538609-450e-4a1e-b70c-7d705456e7bd"/>
+				<text><![CDATA[Address :]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="83" width="556" height="1" uuid="c229a9cd-8f0f-43be-bf71-dd503f2b94e1">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</graphicElement>
+			</line>
 		</band>
 	</title>
 	<columnHeader>
@@ -488,11 +518,11 @@
 					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Center"/>
-				<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{SrNo}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="47" y="0" width="234" height="19" uuid="82addd79-42c8-4f23-b63a-76812ca3df14"/>
-				<box leftPadding="2">
+				<box leftPadding="4">
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -502,7 +532,7 @@
 			</textField>
 			<textField>
 				<reportElement x="281" y="0" width="69" height="19" uuid="fcc05219-d807-47ff-aaa3-72c7151e0d3a"/>
-				<box rightPadding="2">
+				<box rightPadding="4">
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -513,7 +543,7 @@
 			</textField>
 			<textField>
 				<reportElement x="350" y="0" width="65" height="19" uuid="81d9db80-043f-42fb-8877-d10a45811ebb"/>
-				<box rightPadding="2">
+				<box rightPadding="4">
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -535,7 +565,7 @@
 			</textField>
 			<textField>
 				<reportElement x="480" y="0" width="74" height="19" uuid="a5dca5cb-42c0-42c2-a9fe-af7d661c95bc"/>
-				<box rightPadding="2">
+				<box rightPadding="4">
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -547,15 +577,15 @@
 		</band>
 	</detail>
 	<lastPageFooter>
-		<band height="37">
+		<band height="28">
 			<line>
-				<reportElement x="0" y="13" width="556" height="1" uuid="cdd749fb-9b44-4dba-8eb6-aacd0bdbc9ed">
+				<reportElement x="0" y="4" width="556" height="1" uuid="cdd749fb-9b44-4dba-8eb6-aacd0bdbc9ed">
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 			</line>
 			<staticText>
-				<reportElement x="1" y="17" width="555" height="20" uuid="64c90acf-653f-44db-87d0-403038368ced"/>
+				<reportElement x="1" y="8" width="555" height="20" uuid="64c90acf-653f-44db-87d0-403038368ced"/>
 				<textElement textAlignment="Center"/>
 				<text><![CDATA[!! Thank you !! Visit Again !!]]></text>
 			</staticText>
