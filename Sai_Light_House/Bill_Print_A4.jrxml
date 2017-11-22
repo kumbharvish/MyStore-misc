@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
-<!-- 2017-11-21T10:36:03 -->
+<!-- 2017-11-22T22:40:05 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Bill_Print_A4" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4eedbb89-b4f6-4469-9ab6-f642a1688cf7">
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
 	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
@@ -399,18 +399,30 @@
 			</textField>
 			<textField>
 				<reportElement x="11" y="25" width="270" height="15" uuid="a672a038-b8aa-4a31-a2cf-582e20e00dff"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
 				<textFieldExpression><![CDATA[$P{Address}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="11" y="40" width="270" height="15" uuid="a485e519-4c4a-4f20-a206-0fa567033399"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
 				<textFieldExpression><![CDATA[$P{Address2}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="11" y="55" width="270" height="15" uuid="e3e9ba73-f935-4768-8ec3-2006ddcef0de"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
 				<textFieldExpression><![CDATA[$P{MobileNumber}]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement x="11" y="9" width="87" height="17" uuid="56538609-450e-4a1e-b70c-7d705456e7bd"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
 				<text><![CDATA[Address :]]></text>
 			</staticText>
 			<line>
