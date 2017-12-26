@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
-<!-- 2017-12-26T16:35:14 -->
+<!-- 2017-12-26T15:54:12 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Bill_Print" pageWidth="226" pageHeight="1417" columnWidth="186" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0814d333-e1dd-4e03-97db-6eae8a46e09f">
 	<property name="com.jaspersoft.studio.unit." value="mm"/>
 	<parameter name="StoreName" class="java.lang.String"/>
@@ -16,11 +16,12 @@
 	<field name="TotalAmount" class="java.lang.String"/>
 	<field name="NetSalesAmount" class="java.lang.String"/>
 	<field name="BillNo" class="java.lang.String"/>
+	<field name="RoundUp" class="java.lang.String"/>
 	<field name="DiscountPer" class="java.lang.String"/>
 	<field name="DiscountAmount" class="java.lang.String"/>
 	<group name="TotalGroup">
 		<groupFooter>
-			<band height="76">
+			<band height="89">
 				<staticText>
 					<reportElement x="1" y="-6" width="186" height="11" uuid="e0830128-c59f-42da-af0a-369bf5dbe869">
 						<property name="com.jaspersoft.studio.unit.width" value="mm"/>
@@ -61,7 +62,7 @@
 					<text><![CDATA[Total Amt :]]></text>
 				</staticText>
 				<staticText>
-					<reportElement x="95" y="28" width="55" height="13" uuid="1351a208-ef0c-4736-965e-9e1cde4bfba8">
+					<reportElement x="95" y="39" width="55" height="13" uuid="1351a208-ef0c-4736-965e-9e1cde4bfba8">
 						<property name="com.jaspersoft.studio.unit.width" value="mm"/>
 					</reportElement>
 					<textElement textAlignment="Right">
@@ -70,7 +71,7 @@
 					<text><![CDATA[Net Amount :]]></text>
 				</staticText>
 				<textField>
-					<reportElement x="150" y="28" width="36" height="13" uuid="9cd765a7-2a6e-4b83-a2f8-bb842d92bdfd">
+					<reportElement x="150" y="39" width="36" height="13" uuid="9cd765a7-2a6e-4b83-a2f8-bb842d92bdfd">
 						<property name="com.jaspersoft.studio.unit.height" value="mm"/>
 					</reportElement>
 					<textElement textAlignment="Right">
@@ -79,7 +80,7 @@
 					<textFieldExpression><![CDATA[$F{NetSalesAmount}]]></textFieldExpression>
 				</textField>
 				<staticText>
-					<reportElement x="1" y="38" width="186" height="11" uuid="465079f9-2f1d-4da7-982b-1145dd2fad14">
+					<reportElement x="1" y="51" width="186" height="11" uuid="465079f9-2f1d-4da7-982b-1145dd2fad14">
 						<property name="com.jaspersoft.studio.unit.width" value="mm"/>
 						<property name="com.jaspersoft.studio.unit.height" value="mm"/>
 					</reportElement>
@@ -89,14 +90,14 @@
 					<text><![CDATA[--------------------------------------------------------------------------------------]]></text>
 				</staticText>
 				<staticText>
-					<reportElement x="0" y="49" width="186" height="16" uuid="159ad35e-6a40-4869-993a-f42ca974c501"/>
+					<reportElement x="0" y="62" width="186" height="16" uuid="159ad35e-6a40-4869-993a-f42ca974c501"/>
 					<textElement textAlignment="Center">
 						<font fontName="Times New Roman" size="8" isBold="true"/>
 					</textElement>
 					<text><![CDATA[!! Thank You !! Visit Again !!]]></text>
 				</staticText>
 				<staticText>
-					<reportElement x="0" y="60" width="186" height="16" uuid="21ab7bde-4be5-4c44-8777-4ea45865cf24"/>
+					<reportElement x="0" y="73" width="186" height="16" uuid="21ab7bde-4be5-4c44-8777-4ea45865cf24"/>
 					<textElement textAlignment="Center">
 						<font fontName="Times New Roman" size="8" isBold="true"/>
 					</textElement>
@@ -149,6 +150,27 @@
 						<font fontName="Times New Roman" size="8" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{DiscountAmount}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="108" y="28" width="42" height="11" isRemoveLineWhenBlank="true" uuid="7915f316-8b15-4a11-b372-4f7005f1e347">
+						<property name="com.jaspersoft.studio.unit.height" value="mm"/>
+						<property name="com.jaspersoft.studio.unit.width" value="mm"/>
+						<printWhenExpression><![CDATA[(!$F{RoundUp}.equals("0.00"))]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Right">
+						<font fontName="Times New Roman" size="8"/>
+					</textElement>
+					<text><![CDATA[Round Up :]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="150" y="28" width="36" height="11" isRemoveLineWhenBlank="true" uuid="c0dffa5d-1429-4011-ab61-63ba3a0d58f8">
+						<property name="com.jaspersoft.studio.unit.height" value="mm"/>
+						<printWhenExpression><![CDATA[(!$F{RoundUp}.equals("0.00"))]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Right">
+						<font fontName="Times New Roman" size="8" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{RoundUp}]]></textFieldExpression>
 				</textField>
 				<staticText>
 					<reportElement x="44" y="17" width="39" height="11" isRemoveLineWhenBlank="true" uuid="2205f49e-57df-4bab-8223-893993138130">
