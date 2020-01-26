@@ -6,9 +6,10 @@
 	<parameter name="Address" class="java.lang.String"/>
 	<parameter name="Address2" class="java.lang.String"/>
 	<parameter name="MobileNumber" class="java.lang.String"/>
-	<field name="Name" class="java.lang.String"/>
+	<field name="ProductName" class="java.lang.String"/>
+	<field name="PurchasePrice" class="java.lang.String"/>
+	<field name="StockValue" class="java.lang.String"/>
 	<field name="Qty" class="java.lang.String"/>
-	<field name="ProfitAmount" class="java.lang.String"/>
 	<field name="Category" class="java.lang.String"/>
 	<group name="Total Group"/>
 	<background>
@@ -32,32 +33,14 @@
 				<textElement textAlignment="Center">
 					<font fontName="DejaVu Sans" size="14" isBold="true" isUnderline="true"/>
 				</textElement>
-				<text><![CDATA[Product Profit Report]]></text>
+				<text><![CDATA[Product Category Wise Stock Report]]></text>
 			</staticText>
 		</band>
 	</pageHeader>
 	<columnHeader>
 		<band height="21" splitType="Stretch">
 			<staticText>
-				<reportElement mode="Opaque" x="0" y="1" width="160" height="20" forecolor="#000000" backcolor="#E3E1E1" uuid="66fa5a7e-ac9c-4222-a6f0-3e239a183130">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
-				</reportElement>
-				<box>
-					<pen lineWidth="0.25" lineColor="#949292"/>
-					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#949292"/>
-					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<bottomPen lineWidth="0.25" lineStyle="Solid" lineColor="#949292"/>
-					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-				</box>
-				<textElement textAlignment="Left" verticalAlignment="Middle">
-					<font fontName="DejaVu Sans" size="9" isBold="true" isItalic="false"/>
-					<paragraph firstLineIndent="5"/>
-				</textElement>
-				<text><![CDATA[Product Name]]></text>
-			</staticText>
-			<staticText>
-				<reportElement mode="Opaque" x="440" y="1" width="115" height="20" forecolor="#000000" backcolor="#E3E1E1" uuid="a4bfb035-c824-4d88-a90f-9d43fca52be3">
+				<reportElement mode="Opaque" x="400" y="1" width="155" height="20" forecolor="#000000" backcolor="#E3E1E1" uuid="a4bfb035-c824-4d88-a90f-9d43fca52be3">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 				</reportElement>
@@ -72,10 +55,10 @@
 					<font fontName="DejaVu Sans" size="9" isBold="true"/>
 					<paragraph rightIndent="5"/>
 				</textElement>
-				<text><![CDATA[Profit Amount]]></text>
+				<text><![CDATA[Stock Value]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="320" y="1" width="120" height="20" forecolor="#000000" backcolor="#E3E1E1" uuid="a4611f8c-82dc-423c-b6e3-81321926267b">
+				<reportElement mode="Opaque" x="270" y="1" width="130" height="20" forecolor="#000000" backcolor="#E3E1E1" uuid="865ee11e-a38f-4456-af0e-22d9b75fbe42">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<box>
@@ -91,8 +74,9 @@
 				<text><![CDATA[Stock Quantity]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="160" y="1" width="160" height="20" forecolor="#000000" backcolor="#E3E1E1" uuid="bfb2d341-0027-48de-9a25-547125893536">
+				<reportElement mode="Opaque" x="0" y="1" width="270" height="20" isPrintInFirstWholeBand="true" forecolor="#000000" backcolor="#E3E1E1" uuid="bfb2d341-0027-48de-9a25-547125893536">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
 				</reportElement>
 				<box>
 					<pen lineWidth="0.25" lineColor="#949292"/>
@@ -103,33 +87,16 @@
 				</box>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
 					<font fontName="DejaVu Sans" size="9" isBold="true"/>
+					<paragraph leftIndent="5"/>
 				</textElement>
-				<text><![CDATA[Category Name]]></text>
+				<text><![CDATA[Category]]></text>
 			</staticText>
 		</band>
 	</columnHeader>
 	<detail>
 		<band height="20" splitType="Stretch">
 			<textField>
-				<reportElement x="0" y="0" width="160" height="20" uuid="79bbbb33-bcd8-4036-af54-934306b9132a">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
-				</reportElement>
-				<box>
-					<pen lineWidth="0.25" lineColor="#949292"/>
-					<topPen lineWidth="0.0" lineStyle="Dashed" lineColor="#949292"/>
-					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<bottomPen lineWidth="0.25" lineStyle="Solid" lineColor="#949292"/>
-					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-				</box>
-				<textElement textAlignment="Left" verticalAlignment="Middle">
-					<font fontName="DejaVu Sans" size="8"/>
-					<paragraph firstLineIndent="5"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{Name}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="440" y="0" width="115" height="20" uuid="d88f1267-c674-4f04-a057-a1885c43a385">
+				<reportElement x="400" y="0" width="155" height="20" uuid="d88f1267-c674-4f04-a057-a1885c43a385">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 				</reportElement>
@@ -144,10 +111,28 @@
 					<font fontName="DejaVu Sans" size="8" isBold="false"/>
 					<paragraph rightIndent="5"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{ProfitAmount}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{StockValue}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="320" y="0" width="120" height="20" uuid="f0d432ae-96fe-4e9a-bc27-35a09cca41b5">
+				<reportElement x="0" y="0" width="270" height="20" isPrintInFirstWholeBand="true" uuid="8e03aed2-6391-4ade-84dc-ca75aa1c5abb">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.01" lineColor="#949292"/>
+					<topPen lineWidth="0.0" lineStyle="Dashed" lineColor="#949292"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.25" lineStyle="Solid" lineColor="#949292"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="8"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Category}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="270" y="0" width="130" height="20" uuid="3e51b85b-b911-4078-94ff-4f453ebf82fe">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<box>
@@ -161,22 +146,6 @@
 					<font fontName="DejaVu Sans" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{Qty}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="160" y="0" width="160" height="20" uuid="8e03aed2-6391-4ade-84dc-ca75aa1c5abb">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				</reportElement>
-				<box>
-					<pen lineWidth="0.01" lineColor="#949292"/>
-					<topPen lineWidth="0.0" lineStyle="Dashed" lineColor="#949292"/>
-					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<bottomPen lineWidth="0.25" lineStyle="Solid" lineColor="#949292"/>
-					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-				</box>
-				<textElement textAlignment="Left" verticalAlignment="Middle">
-					<font fontName="DejaVu Sans" size="8"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{Category}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
