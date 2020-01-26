@@ -198,7 +198,7 @@
 				<textFieldExpression><![CDATA[$P{MobileNumber}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="84" y="70" width="102" height="10" uuid="9b83b983-978c-4904-80cf-66f3637cf9e7"/>
+				<reportElement x="70" y="70" width="116" height="10" uuid="9b83b983-978c-4904-80cf-66f3637cf9e7"/>
 				<textElement textAlignment="Right">
 					<font fontName="DejaVu Sans" size="8"/>
 					<paragraph rightIndent="2"/>
@@ -206,12 +206,12 @@
 				<textFieldExpression><![CDATA["Date : "+$F{InvoiceDateTime}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="0" y="70" width="84" height="10" uuid="ce7c2b84-9ca1-4c3a-bc17-8c71b6f4831e"/>
+				<reportElement x="0" y="70" width="70" height="10" uuid="ce7c2b84-9ca1-4c3a-bc17-8c71b6f4831e"/>
 				<textElement markup="none">
 					<font fontName="DejaVu Sans" size="8" isBold="false"/>
 					<paragraph leftIndent="2"/>
 				</textElement>
-				<textFieldExpression><![CDATA["Invoice No. : "+$F{BillNo}]]></textFieldExpression>
+				<textFieldExpression><![CDATA["Bill No : "+$F{BillNo}]]></textFieldExpression>
 			</textField>
 		</band>
 	</title>
