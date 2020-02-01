@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Jaspersoft Studio version 6.9.0.final using JasperReports Library version 6.9.0-cb8f9004be492ccc537180b49c026951f4220bf3  -->
+<!-- Created with Jaspersoft Studio version 6.11.0.final using JasperReports Library version 6.11.0-0c4056ccaa4d25a5a8c45672d2f764ea3498bebb  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Product_Report" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="19306172-b07a-4fa6-b962-af877ce524aa">
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
 	<parameter name="StoreName" class="java.lang.String"/>
@@ -76,7 +76,7 @@
 				<text><![CDATA[Stock Value]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="320" y="1" width="110" height="20" forecolor="#000000" backcolor="#E3E1E1" uuid="865ee11e-a38f-4456-af0e-22d9b75fbe42">
+				<reportElement mode="Opaque" x="340" y="1" width="90" height="20" forecolor="#000000" backcolor="#E3E1E1" uuid="865ee11e-a38f-4456-af0e-22d9b75fbe42">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<box>
@@ -92,7 +92,7 @@
 				<text><![CDATA[Stock Quantity]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="200" y="1" width="120" height="20" forecolor="#000000" backcolor="#E3E1E1" uuid="bfb2d341-0027-48de-9a25-547125893536">
+				<reportElement mode="Opaque" x="200" y="1" width="140" height="20" forecolor="#000000" backcolor="#E3E1E1" uuid="bfb2d341-0027-48de-9a25-547125893536">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<box>
@@ -148,7 +148,7 @@
 				<textFieldExpression><![CDATA[$F{StockValue}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="200" y="0" width="120" height="20" uuid="8e03aed2-6391-4ade-84dc-ca75aa1c5abb">
+				<reportElement x="200" y="0" width="140" height="20" uuid="8e03aed2-6391-4ade-84dc-ca75aa1c5abb">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<box>
@@ -164,7 +164,7 @@
 				<textFieldExpression><![CDATA[$F{Category}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="320" y="0" width="110" height="20" uuid="3e51b85b-b911-4078-94ff-4f453ebf82fe">
+				<reportElement x="340" y="0" width="90" height="20" uuid="3e51b85b-b911-4078-94ff-4f453ebf82fe">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<box>
