@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Jaspersoft Studio version 6.9.0.final using JasperReports Library version 6.9.0-cb8f9004be492ccc537180b49c026951f4220bf3  -->
+<!-- Created with Jaspersoft Studio version 6.11.0.final using JasperReports Library version 6.11.0-0c4056ccaa4d25a5a8c45672d2f764ea3498bebb  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Product_Report" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="19306172-b07a-4fa6-b962-af877ce524aa">
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
 	<parameter name="StoreName" class="java.lang.String"/>
@@ -39,7 +39,7 @@
 	<columnHeader>
 		<band height="21" splitType="Stretch">
 			<staticText>
-				<reportElement mode="Opaque" x="0" y="1" width="160" height="20" forecolor="#000000" backcolor="#E3E1E1" uuid="66fa5a7e-ac9c-4222-a6f0-3e239a183130">
+				<reportElement mode="Opaque" x="0" y="1" width="180" height="20" forecolor="#000000" backcolor="#E3E1E1" uuid="66fa5a7e-ac9c-4222-a6f0-3e239a183130">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
 				</reportElement>
@@ -75,7 +75,7 @@
 				<text><![CDATA[Profit Amount]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="320" y="1" width="120" height="20" forecolor="#000000" backcolor="#E3E1E1" uuid="a4611f8c-82dc-423c-b6e3-81321926267b">
+				<reportElement mode="Opaque" x="330" y="1" width="110" height="20" forecolor="#000000" backcolor="#E3E1E1" uuid="a4611f8c-82dc-423c-b6e3-81321926267b">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<box>
@@ -91,7 +91,7 @@
 				<text><![CDATA[Stock Quantity]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="160" y="1" width="160" height="20" forecolor="#000000" backcolor="#E3E1E1" uuid="bfb2d341-0027-48de-9a25-547125893536">
+				<reportElement mode="Opaque" x="180" y="1" width="150" height="20" forecolor="#000000" backcolor="#E3E1E1" uuid="bfb2d341-0027-48de-9a25-547125893536">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<box>
@@ -111,7 +111,7 @@
 	<detail>
 		<band height="20" splitType="Stretch">
 			<textField>
-				<reportElement x="0" y="0" width="160" height="20" uuid="79bbbb33-bcd8-4036-af54-934306b9132a">
+				<reportElement x="0" y="0" width="180" height="20" uuid="79bbbb33-bcd8-4036-af54-934306b9132a">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
 				</reportElement>
@@ -147,7 +147,7 @@
 				<textFieldExpression><![CDATA[$F{ProfitAmount}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="320" y="0" width="120" height="20" uuid="f0d432ae-96fe-4e9a-bc27-35a09cca41b5">
+				<reportElement x="330" y="0" width="110" height="20" uuid="f0d432ae-96fe-4e9a-bc27-35a09cca41b5">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<box>
@@ -163,7 +163,7 @@
 				<textFieldExpression><![CDATA[$F{Qty}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="160" y="0" width="160" height="20" uuid="8e03aed2-6391-4ade-84dc-ca75aa1c5abb">
+				<reportElement x="180" y="0" width="150" height="20" uuid="8e03aed2-6391-4ade-84dc-ca75aa1c5abb">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<box>
