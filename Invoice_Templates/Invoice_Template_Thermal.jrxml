@@ -24,9 +24,10 @@
 	<field name="SGSTAmount" class="java.lang.String"/>
 	<field name="ItemAmt" class="java.lang.String"/>
 	<field name="TotalAmountForCashInvoice" class="java.lang.String"/>
+	<field name="termsCondition" class="java.lang.String"/>
 	<group name="TotalGroup">
 		<groupFooter>
-			<band height="83">
+			<band height="72">
 				<staticText>
 					<reportElement x="0" y="0" width="186" height="11" uuid="e0830128-c59f-42da-af0a-369bf5dbe869">
 						<property name="com.jaspersoft.studio.unit.width" value="mm"/>
@@ -47,20 +48,13 @@
 					</textElement>
 					<text><![CDATA[--------------------------------------------------------------------------------------]]></text>
 				</staticText>
-				<staticText>
-					<reportElement x="0" y="62" width="186" height="10" uuid="159ad35e-6a40-4869-993a-f42ca974c501"/>
+				<textField isStretchWithOverflow="true">
+					<reportElement x="0" y="62" width="186" height="10" uuid="b3b761fd-b422-4d08-81b7-8c115ba9de05"/>
 					<textElement textAlignment="Center">
 						<font fontName="DejaVu Sans" size="8" isBold="true"/>
 					</textElement>
-					<text><![CDATA[!! Thank You !! Visit Again !!]]></text>
-				</staticText>
-				<staticText>
-					<reportElement x="0" y="72" width="186" height="11" uuid="21ab7bde-4be5-4c44-8777-4ea45865cf24"/>
-					<textElement textAlignment="Center">
-						<font fontName="DejaVu Sans" size="8" isBold="true"/>
-					</textElement>
-					<text><![CDATA[No Exchange, No Refund]]></text>
-				</staticText>
+					<textFieldExpression><![CDATA[$F{termsCondition}]]></textFieldExpression>
+				</textField>
 				<staticText>
 					<reportElement x="50" y="11" width="80" height="10" isRemoveLineWhenBlank="true" uuid="88f17dd7-6608-4cbb-afb4-a640efb030d1">
 						<printWhenExpression><![CDATA[new Double($F{DiscountAmount}) !=0]]></printWhenExpression>
