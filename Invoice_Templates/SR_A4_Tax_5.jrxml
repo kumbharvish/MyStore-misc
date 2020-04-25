@@ -88,7 +88,7 @@
 				<box>
 					<pen lineWidth="0.25" lineStyle="Solid" lineColor="#736F6F"/>
 				</box>
-				<textElement>
+				<textElement verticalAlignment="Middle">
 					<paragraph leftIndent="5"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{taxType}]]></textFieldExpression>
@@ -100,7 +100,7 @@
 				<box>
 					<pen lineWidth="0.25" lineStyle="Solid" lineColor="#736F6F"/>
 				</box>
-				<textElement textAlignment="Right">
+				<textElement textAlignment="Right" verticalAlignment="Middle">
 					<paragraph rightIndent="5"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{taxableAmount}]]></textFieldExpression>
@@ -112,7 +112,7 @@
 				<box>
 					<pen lineWidth="0.25" lineStyle="Solid" lineColor="#736F6F"/>
 				</box>
-				<textElement textAlignment="Right">
+				<textElement textAlignment="Right" verticalAlignment="Middle">
 					<paragraph rightIndent="5"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{gstRate}]]></textFieldExpression>
@@ -124,7 +124,7 @@
 				<box>
 					<pen lineWidth="0.25" lineStyle="Solid" lineColor="#736F6F"/>
 				</box>
-				<textElement textAlignment="Right">
+				<textElement textAlignment="Right" verticalAlignment="Middle">
 					<paragraph rightIndent="5"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{taxAmount}]]></textFieldExpression>

@@ -24,12 +24,15 @@
 		<band splitType="Stretch"/>
 	</background>
 	<columnHeader>
-		<band height="67">
+		<band height="91">
 			<staticText>
-				<reportElement mode="Opaque" x="0" y="7" width="140" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="592bafd3-abb5-44d5-9eaf-e31167e76fcd">
+				<reportElement mode="Opaque" x="0" y="31" width="140" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="592bafd3-abb5-44d5-9eaf-e31167e76fcd">
 					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
 				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid" lineColor="#736F6F"/>
+				</box>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
 					<font fontName="DejaVu Sans" size="9" isBold="false"/>
 					<paragraph leftIndent="5" rightIndent="0"/>
@@ -37,9 +40,12 @@
 				<text><![CDATA[Sub Total]]></text>
 			</staticText>
 			<textField>
-				<reportElement mode="Opaque" x="140" y="7" width="110" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="aa0643f7-e73e-4793-83cd-c9cfd392f891">
+				<reportElement mode="Opaque" x="140" y="31" width="110" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="aa0643f7-e73e-4793-83cd-c9cfd392f891">
 					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid" lineColor="#736F6F"/>
+				</box>
 				<textElement textAlignment="Right" verticalAlignment="Middle">
 					<font fontName="DejaVu Sans" size="9" isBold="false"/>
 					<paragraph rightIndent="5"/>
@@ -47,9 +53,12 @@
 				<textFieldExpression><![CDATA[$F{subTotalAmount}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="0" y="47" width="140" height="20" uuid="4ed34ab2-c462-44db-a28a-86852b91aadb">
+				<reportElement x="0" y="71" width="140" height="20" uuid="4ed34ab2-c462-44db-a28a-86852b91aadb">
 					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
 				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid" lineColor="#736F6F"/>
+				</box>
 				<textElement verticalAlignment="Middle">
 					<font fontName="DejaVu Sans" size="9"/>
 					<paragraph leftIndent="5"/>
@@ -57,9 +66,12 @@
 				<text><![CDATA[Discount Amount]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="140" y="47" width="110" height="20" uuid="f2fa0e6f-b0a6-4e14-9836-c28d055d9074">
+				<reportElement x="140" y="71" width="110" height="20" uuid="f2fa0e6f-b0a6-4e14-9836-c28d055d9074">
 					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid" lineColor="#736F6F"/>
+				</box>
 				<textElement textAlignment="Right" verticalAlignment="Middle">
 					<font fontName="DejaVu Sans" size="9"/>
 					<paragraph rightIndent="5"/>
@@ -67,9 +79,12 @@
 				<textFieldExpression><![CDATA[$F{discountAmount}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="140" y="27" width="110" height="20" uuid="654b42be-604b-41c1-8f9c-6fb8ca5acfa6">
+				<reportElement x="140" y="51" width="110" height="20" uuid="654b42be-604b-41c1-8f9c-6fb8ca5acfa6">
 					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid" lineColor="#736F6F"/>
+				</box>
 				<textElement textAlignment="Right" verticalAlignment="Middle">
 					<font fontName="DejaVu Sans" size="9"/>
 					<paragraph rightIndent="5"/>
@@ -77,14 +92,31 @@
 				<textFieldExpression><![CDATA[$F{discountPer}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="0" y="27" width="140" height="20" uuid="f35a1a9d-5922-4f2e-ac7e-765c717a9d7e">
+				<reportElement x="0" y="51" width="140" height="20" uuid="f35a1a9d-5922-4f2e-ac7e-765c717a9d7e">
 					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
 				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid" lineColor="#736F6F"/>
+				</box>
 				<textElement verticalAlignment="Middle">
 					<font fontName="DejaVu Sans" size="9"/>
 					<paragraph leftIndent="5"/>
 				</textElement>
 				<text><![CDATA[Discount (%)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="11" width="250" height="20" forecolor="#000000" backcolor="#E3E1E1" uuid="021bdd21-34b4-45a8-a544-90bdeb3f9428">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid" lineColor="#736F6F"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="9" isBold="true"/>
+					<paragraph leftIndent="5" rightIndent="0"/>
+				</textElement>
+				<text><![CDATA[Amounts:]]></text>
 			</staticText>
 		</band>
 	</columnHeader>
@@ -92,10 +124,13 @@
 		<band height="125">
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			<staticText>
-				<reportElement mode="Opaque" x="0" y="0" width="140" height="20" forecolor="#000000" backcolor="#E3E1E1" uuid="3bc4a5e6-4cc2-453c-a672-0e419cb23018">
+				<reportElement mode="Transparent" x="0" y="0" width="140" height="20" forecolor="#000000" backcolor="#E3E1E1" uuid="3bc4a5e6-4cc2-453c-a672-0e419cb23018">
 					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
 				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid" lineColor="#736F6F"/>
+				</box>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
 					<font fontName="DejaVu Sans" size="9" isBold="true"/>
 					<paragraph leftIndent="5" rightIndent="0"/>
@@ -103,9 +138,12 @@
 				<text><![CDATA[Total]]></text>
 			</staticText>
 			<textField>
-				<reportElement mode="Opaque" x="140" y="0" width="110" height="20" forecolor="#000000" backcolor="#E3E1E1" uuid="5acc9012-f88e-412d-ad92-91a4446a90cb">
+				<reportElement mode="Transparent" x="140" y="0" width="110" height="20" forecolor="#000000" backcolor="#E3E1E1" uuid="5acc9012-f88e-412d-ad92-91a4446a90cb">
 					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid" lineColor="#736F6F"/>
+				</box>
 				<textElement textAlignment="Right" verticalAlignment="Middle">
 					<font fontName="DejaVu Sans" size="9" isBold="true"/>
 					<paragraph rightIndent="5"/>

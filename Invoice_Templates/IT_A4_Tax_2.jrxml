@@ -110,37 +110,47 @@
 				<text><![CDATA[Item Name]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="180" y="0" width="61" height="20" forecolor="#000000" backcolor="#E3E1E1" uuid="b81a600a-5147-4aaf-9c9b-888ddad00470"/>
+				<reportElement mode="Opaque" x="180" y="0" width="61" height="20" forecolor="#000000" backcolor="#E3E1E1" uuid="b81a600a-5147-4aaf-9c9b-888ddad00470">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
 					<font fontName="DejaVu Sans" size="9" isBold="true"/>
+					<paragraph leftIndent="5"/>
 				</textElement>
 				<text><![CDATA[HSN]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="241" y="0" width="39" height="20" forecolor="#000000" backcolor="#E3E1E1" uuid="67a13f9f-f3df-4905-a9de-0b123fcfd565"/>
+				<reportElement mode="Opaque" x="241" y="0" width="39" height="20" forecolor="#000000" backcolor="#E3E1E1" uuid="67a13f9f-f3df-4905-a9de-0b123fcfd565">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
 				<textElement textAlignment="Right" verticalAlignment="Middle">
 					<font fontName="DejaVu Sans" size="9" isBold="true"/>
+					<paragraph rightIndent="5"/>
 				</textElement>
 				<text><![CDATA[Qty]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="280" y="0" width="50" height="20" forecolor="#000000" backcolor="#E3E1E1" uuid="65f519d6-13e1-435a-8b2a-679a83828abb"/>
+				<reportElement mode="Opaque" x="280" y="0" width="50" height="20" forecolor="#000000" backcolor="#E3E1E1" uuid="65f519d6-13e1-435a-8b2a-679a83828abb">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
 				<textElement textAlignment="Right" verticalAlignment="Middle">
 					<font fontName="DejaVu Sans" size="9" isBold="true"/>
+					<paragraph rightIndent="5"/>
 				</textElement>
 				<text><![CDATA[Rate]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="400" y="0" width="75" height="20" forecolor="#000000" backcolor="#E3E1E1" uuid="7ae74138-33bb-4eb5-be0c-b0eadabacaad"/>
+				<reportElement mode="Opaque" x="400" y="0" width="75" height="20" forecolor="#000000" backcolor="#E3E1E1" uuid="7ae74138-33bb-4eb5-be0c-b0eadabacaad">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
 				<textElement textAlignment="Right" verticalAlignment="Middle">
 					<font fontName="DejaVu Sans" size="9" isBold="true"/>
+					<paragraph rightIndent="5"/>
 				</textElement>
 				<text><![CDATA[GST]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="475" y="0" width="80" height="20" forecolor="#000000" backcolor="#E3E1E1" uuid="0fd10e71-86db-4379-9ce3-bcf776238e0a">
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
-				</reportElement>
+				<reportElement mode="Opaque" x="475" y="0" width="80" height="20" forecolor="#000000" backcolor="#E3E1E1" uuid="0fd10e71-86db-4379-9ce3-bcf776238e0a"/>
 				<textElement textAlignment="Right" verticalAlignment="Middle">
 					<font fontName="DejaVu Sans" size="9" isBold="true"/>
 					<paragraph rightIndent="5"/>
@@ -148,9 +158,12 @@
 				<text><![CDATA[Amount]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="330" y="0" width="70" height="20" forecolor="#000000" backcolor="#E3E1E1" uuid="882b32e5-1819-4c14-aa38-7ddc62f6b899"/>
+				<reportElement mode="Opaque" x="330" y="0" width="70" height="20" forecolor="#000000" backcolor="#E3E1E1" uuid="882b32e5-1819-4c14-aa38-7ddc62f6b899">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
 				<textElement textAlignment="Right" verticalAlignment="Middle">
 					<font fontName="DejaVu Sans" size="9" isBold="true"/>
+					<paragraph rightIndent="5"/>
 				</textElement>
 				<text><![CDATA[Discount]]></text>
 			</staticText>

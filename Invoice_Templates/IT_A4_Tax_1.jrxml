@@ -6,9 +6,6 @@
 	<parameter name="SUBREPORT_DATA" class="java.util.List"/>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String"/>
 	<parameter name="SUBREPORT_TC_DATA" class="java.util.List"/>
-	<queryString>
-		<![CDATA[]]>
-	</queryString>
 	<field name="CustomerMobileNo" class="java.lang.String"/>
 	<field name="CustomerName" class="java.lang.String"/>
 	<field name="BillNo" class="java.lang.String"/>
@@ -106,30 +103,43 @@
 				<text><![CDATA[Item Name]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="200" y="0" width="70" height="20" forecolor="#000000" backcolor="#E3E1E1" uuid="b81a600a-5147-4aaf-9c9b-888ddad00470"/>
+				<reportElement mode="Opaque" x="200" y="0" width="70" height="20" forecolor="#000000" backcolor="#E3E1E1" uuid="b81a600a-5147-4aaf-9c9b-888ddad00470">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
 					<font fontName="DejaVu Sans" size="9" isBold="true"/>
+					<paragraph leftIndent="5" rightIndent="0"/>
 				</textElement>
 				<text><![CDATA[HSN]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="270" y="0" width="50" height="20" forecolor="#000000" backcolor="#E3E1E1" uuid="67a13f9f-f3df-4905-a9de-0b123fcfd565"/>
+				<reportElement mode="Opaque" x="270" y="0" width="50" height="20" forecolor="#000000" backcolor="#E3E1E1" uuid="67a13f9f-f3df-4905-a9de-0b123fcfd565">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
 				<textElement textAlignment="Right" verticalAlignment="Middle">
 					<font fontName="DejaVu Sans" size="9" isBold="true"/>
+					<paragraph rightIndent="5"/>
 				</textElement>
 				<text><![CDATA[Qty]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="320" y="0" width="70" height="20" forecolor="#000000" backcolor="#E3E1E1" uuid="65f519d6-13e1-435a-8b2a-679a83828abb"/>
+				<reportElement mode="Opaque" x="320" y="0" width="70" height="20" forecolor="#000000" backcolor="#E3E1E1" uuid="65f519d6-13e1-435a-8b2a-679a83828abb">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
 				<textElement textAlignment="Right" verticalAlignment="Middle">
 					<font fontName="DejaVu Sans" size="9" isBold="true"/>
+					<paragraph rightIndent="5"/>
 				</textElement>
 				<text><![CDATA[Rate]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="390" y="0" width="85" height="20" forecolor="#000000" backcolor="#E3E1E1" uuid="7ae74138-33bb-4eb5-be0c-b0eadabacaad"/>
+				<reportElement mode="Opaque" x="390" y="0" width="85" height="20" forecolor="#000000" backcolor="#E3E1E1" uuid="7ae74138-33bb-4eb5-be0c-b0eadabacaad">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
 				<textElement textAlignment="Right" verticalAlignment="Middle">
 					<font fontName="DejaVu Sans" size="9" isBold="true"/>
+					<paragraph rightIndent="5"/>
 				</textElement>
 				<text><![CDATA[GST]]></text>
 			</staticText>
@@ -187,6 +197,7 @@
 			<textField>
 				<reportElement x="200" y="0" width="70" height="20" uuid="87a06686-17c9-48c8-93cb-4d9beafa1d89">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
 				</reportElement>
 				<box>
 					<pen lineWidth="0.01" lineColor="#949292"/>
@@ -197,12 +208,14 @@
 				</box>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
 					<font fontName="DejaVu Sans" size="9"/>
+					<paragraph leftIndent="5"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{HSN}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="270" y="0" width="50" height="20" uuid="879012c4-18f0-4128-afd3-4120ae541ff1">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 				</reportElement>
 				<box>
 					<pen lineWidth="0.01" lineColor="#949292"/>
@@ -213,12 +226,14 @@
 				</box>
 				<textElement textAlignment="Right" verticalAlignment="Middle">
 					<font fontName="DejaVu Sans" size="9"/>
+					<paragraph rightIndent="5"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{Qty}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="320" y="0" width="70" height="20" uuid="0bd1f36a-1ca5-459f-896a-c19d3b7bca98">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 				</reportElement>
 				<box>
 					<pen lineWidth="0.01" lineColor="#949292"/>
@@ -229,12 +244,14 @@
 				</box>
 				<textElement textAlignment="Right" verticalAlignment="Middle">
 					<font fontName="DejaVu Sans" size="9"/>
+					<paragraph rightIndent="5"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{Rate}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="390" y="0" width="85" height="20" uuid="62ffa877-4606-4856-bfd2-b93d3c2f57b9">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 				</reportElement>
 				<box>
 					<pen lineWidth="0.01" lineColor="#949292"/>
@@ -245,6 +262,7 @@
 				</box>
 				<textElement textAlignment="Right" verticalAlignment="Middle">
 					<font fontName="DejaVu Sans" size="9"/>
+					<paragraph rightIndent="5"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{ItemGSTAmt}+" ("+$F{ItemGSTPer}+"%)"]]></textFieldExpression>
 			</textField>
@@ -291,6 +309,7 @@
 			<textField>
 				<reportElement x="270" y="0" width="50" height="20" uuid="a9e2ccea-eb56-419d-91e9-0fac5b5b7709">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 				</reportElement>
 				<box>
 					<pen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
@@ -301,12 +320,14 @@
 				</box>
 				<textElement textAlignment="Right" verticalAlignment="Middle">
 					<font fontName="DejaVu Sans" size="9" isBold="true"/>
+					<paragraph rightIndent="5"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{TotalQty}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="390" y="0" width="85" height="20" uuid="57ec7d74-8d0e-4fea-90de-d8f19235a974">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 				</reportElement>
 				<box>
 					<pen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
@@ -317,6 +338,7 @@
 				</box>
 				<textElement textAlignment="Right" verticalAlignment="Middle">
 					<font fontName="DejaVu Sans" size="9" isBold="true"/>
+					<paragraph rightIndent="5"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{GSTAmount}]]></textFieldExpression>
 			</textField>
@@ -356,8 +378,8 @@
 				</textElement>
 				<textFieldExpression><![CDATA[""]]></textFieldExpression>
 			</textField>
-			<textField>
-				<reportElement x="320" y="0" width="70" height="20" uuid="dcc70bce-94a9-4c19-bf60-4c32fd79beb5">
+			<staticText>
+				<reportElement x="320" y="0" width="70" height="20" uuid="dcb8c598-1b43-4fb9-82ae-17094a85b1bc">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<box>
@@ -370,8 +392,8 @@
 				<textElement textAlignment="Right" verticalAlignment="Middle">
 					<font fontName="DejaVu Sans" size="9"/>
 				</textElement>
-				<textFieldExpression><![CDATA[""]]></textFieldExpression>
-			</textField>
+				<text><![CDATA[]]></text>
+			</staticText>
 			<subreport>
 				<reportElement x="305" y="21" width="250" height="30" uuid="888983b5-485a-4c89-8e01-ef5c67beee98">
 					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
