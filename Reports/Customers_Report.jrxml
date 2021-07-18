@@ -232,7 +232,7 @@
 				<textElement textAlignment="Left" verticalAlignment="Middle">
 					<font fontName="DejaVu Sans" size="8"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{Email}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{Email}!=null?$F{Email} : ""]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="160" y="0" width="90" height="20" uuid="8e03aed2-6391-4ade-84dc-ca75aa1c5abb">
@@ -264,7 +264,7 @@
 				<textElement textAlignment="Left" verticalAlignment="Middle">
 					<font fontName="DejaVu Sans" size="8"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{City}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{City}!=null ? $F{City} : ""]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
