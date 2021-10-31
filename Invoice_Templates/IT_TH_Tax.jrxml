@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.9.0.final using JasperReports Library version 6.9.0-cb8f9004be492ccc537180b49c026951f4220bf3  -->
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Bill_Print" pageWidth="226" pageHeight="1417" columnWidth="186" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0814d333-e1dd-4e03-97db-6eae8a46e09f">
-	<property name="com.jaspersoft.studio.unit." value="mm"/>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Bill_Print" pageWidth="226" pageHeight="1417" columnWidth="198" leftMargin="8" rightMargin="20" topMargin="2" bottomMargin="2" uuid="0814d333-e1dd-4e03-97db-6eae8a46e09f">
 	<parameter name="StoreName" class="java.lang.String"/>
 	<parameter name="Address" class="java.lang.String"/>
 	<parameter name="Address2" class="java.lang.String"/>
@@ -25,29 +24,29 @@
 	<field name="termsCondition" class="java.lang.String"/>
 	<group name="TotalGroup">
 		<groupFooter>
-			<band height="102">
+			<band height="105">
 				<staticText>
 					<reportElement x="0" y="0" width="186" height="11" uuid="e0830128-c59f-42da-af0a-369bf5dbe869">
 						<property name="com.jaspersoft.studio.unit.width" value="mm"/>
 						<property name="com.jaspersoft.studio.unit.height" value="mm"/>
 					</reportElement>
 					<textElement>
-						<font fontName="DejaVu Sans" size="8" isBold="false"/>
+						<font fontName="DejaVu Sans" size="9" isBold="true"/>
 					</textElement>
 					<text><![CDATA[--------------------------------------------------------------------------------------]]></text>
 				</staticText>
 				<staticText>
-					<reportElement x="0" y="81" width="186" height="11" uuid="465079f9-2f1d-4da7-982b-1145dd2fad14">
+					<reportElement x="0" y="84" width="186" height="11" uuid="465079f9-2f1d-4da7-982b-1145dd2fad14">
 						<property name="com.jaspersoft.studio.unit.width" value="mm"/>
 						<property name="com.jaspersoft.studio.unit.height" value="mm"/>
 					</reportElement>
 					<textElement>
-						<font fontName="DejaVu Sans" size="8" isBold="false"/>
+						<font fontName="DejaVu Sans" size="9" isBold="true"/>
 					</textElement>
 					<text><![CDATA[--------------------------------------------------------------------------------------]]></text>
 				</staticText>
 				<textField isStretchWithOverflow="true">
-					<reportElement x="0" y="92" width="186" height="10" uuid="695cc5ab-db71-419e-8b28-7b9b89cefbb2"/>
+					<reportElement x="0" y="95" width="186" height="10" uuid="695cc5ab-db71-419e-8b28-7b9b89cefbb2"/>
 					<textElement textAlignment="Center">
 						<font fontName="DejaVu Sans" size="8" isBold="true"/>
 					</textElement>
@@ -56,7 +55,7 @@
 				<staticText>
 					<reportElement x="50" y="11" width="80" height="10" isRemoveLineWhenBlank="true" uuid="88f17dd7-6608-4cbb-afb4-a640efb030d1"/>
 					<textElement textAlignment="Right">
-						<font fontName="DejaVu Sans" size="6"/>
+						<font fontName="DejaVu Sans" size="8"/>
 					</textElement>
 					<text><![CDATA[Sub Total :]]></text>
 				</staticText>
@@ -65,7 +64,7 @@
 						<property name="com.jaspersoft.studio.unit.rightIndent" value="mm"/>
 					</reportElement>
 					<textElement textAlignment="Right">
-						<font fontName="DejaVu Sans" size="6"/>
+						<font fontName="DejaVu Sans" size="8"/>
 						<paragraph rightIndent="2"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{TotalAmount}]]></textFieldExpression>
@@ -75,7 +74,7 @@
 						<printWhenExpression><![CDATA[!$F{DiscountPer}.equalsIgnoreCase( "0" )]]></printWhenExpression>
 					</reportElement>
 					<textElement textAlignment="Right">
-						<font fontName="DejaVu Sans" size="6"/>
+						<font fontName="DejaVu Sans" size="8"/>
 					</textElement>
 					<text><![CDATA[Disc. (%) :]]></text>
 				</staticText>
@@ -91,9 +90,9 @@
 					<textFieldExpression><![CDATA[$F{DiscountPer}]]></textFieldExpression>
 				</textField>
 				<staticText>
-					<reportElement x="50" y="71" width="80" height="10" uuid="14d31c11-3ea7-4547-89c4-56b15a1199d9"/>
+					<reportElement x="40" y="71" width="60" height="13" uuid="14d31c11-3ea7-4547-89c4-56b15a1199d9"/>
 					<textElement textAlignment="Right">
-						<font fontName="DejaVu Sans" size="8" isBold="true"/>
+						<font fontName="DejaVu Sans" size="9" isBold="false"/>
 					</textElement>
 					<text><![CDATA[Total :]]></text>
 				</staticText>
@@ -102,7 +101,7 @@
 						<printWhenExpression><![CDATA[!$F{DiscountAmount}.equalsIgnoreCase( "0.00" )]]></printWhenExpression>
 					</reportElement>
 					<textElement textAlignment="Right">
-						<font fontName="DejaVu Sans" size="6"/>
+						<font fontName="DejaVu Sans" size="8"/>
 					</textElement>
 					<text><![CDATA[(-) Disc. Amount :]]></text>
 				</staticText>
@@ -112,17 +111,18 @@
 						<printWhenExpression><![CDATA[!$F{DiscountAmount}.equalsIgnoreCase( "0.00" )]]></printWhenExpression>
 					</reportElement>
 					<textElement textAlignment="Right">
-						<font fontName="DejaVu Sans" size="6"/>
+						<font fontName="DejaVu Sans" size="8"/>
 						<paragraph rightIndent="2"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{DiscountAmount}]]></textFieldExpression>
 				</textField>
 				<textField>
-					<reportElement x="130" y="71" width="56" height="10" uuid="50745a58-f193-4886-9793-091c6ea9963d">
+					<reportElement x="100" y="71" width="86" height="13" uuid="50745a58-f193-4886-9793-091c6ea9963d">
 						<property name="com.jaspersoft.studio.unit.rightIndent" value="mm"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					</reportElement>
 					<textElement textAlignment="Right">
-						<font fontName="DejaVu Sans" size="8" isBold="true"/>
+						<font fontName="DejaVu Sans" size="9" isBold="true"/>
 						<paragraph rightIndent="2"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{NetSalesAmount}]]></textFieldExpression>
@@ -130,7 +130,7 @@
 				<textField>
 					<reportElement x="50" y="41" width="80" height="10" isRemoveLineWhenBlank="true" uuid="e7322092-3dd2-41a4-a7c9-26fb18e80691"/>
 					<textElement textAlignment="Right">
-						<font fontName="DejaVu Sans" size="6"/>
+						<font fontName="DejaVu Sans" size="8"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{GSTInclusiveFlag}.equalsIgnoreCase( "INCLUSIVE" )?"Total SGST (INCL.) :":"Total SGST :"]]></textFieldExpression>
 				</textField>
@@ -139,7 +139,7 @@
 						<property name="com.jaspersoft.studio.unit.rightIndent" value="mm"/>
 					</reportElement>
 					<textElement textAlignment="Right">
-						<font fontName="DejaVu Sans" size="6"/>
+						<font fontName="DejaVu Sans" size="8"/>
 						<paragraph rightIndent="2"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{SGSTAmount}]]></textFieldExpression>
@@ -147,7 +147,7 @@
 				<textField>
 					<reportElement x="50" y="51" width="80" height="10" isRemoveLineWhenBlank="true" uuid="6305bc09-8afd-4de8-b96c-04477630ac8e"/>
 					<textElement textAlignment="Right">
-						<font fontName="DejaVu Sans" size="6"/>
+						<font fontName="DejaVu Sans" size="8"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{GSTInclusiveFlag}.equalsIgnoreCase( "INCLUSIVE" )?"Total CGST (INCL.) :":"Total CGST :"]]></textFieldExpression>
 				</textField>
@@ -156,7 +156,7 @@
 						<property name="com.jaspersoft.studio.unit.rightIndent" value="mm"/>
 					</reportElement>
 					<textElement textAlignment="Right">
-						<font fontName="DejaVu Sans" size="6"/>
+						<font fontName="DejaVu Sans" size="8"/>
 						<paragraph rightIndent="2"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{CGSTAmount}]]></textFieldExpression>
@@ -164,7 +164,7 @@
 				<staticText>
 					<reportElement x="50" y="61" width="80" height="10" isRemoveLineWhenBlank="true" uuid="72a9d40e-968b-429c-808a-b6a2cdd940d3"/>
 					<textElement textAlignment="Right">
-						<font fontName="DejaVu Sans" size="6"/>
+						<font fontName="DejaVu Sans" size="8"/>
 					</textElement>
 					<text><![CDATA[Total GST :]]></text>
 				</staticText>
@@ -173,7 +173,7 @@
 						<property name="com.jaspersoft.studio.unit.rightIndent" value="mm"/>
 					</reportElement>
 					<textElement textAlignment="Right">
-						<font fontName="DejaVu Sans" size="6"/>
+						<font fontName="DejaVu Sans" size="8"/>
 						<paragraph rightIndent="2"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{GSTAmount}]]></textFieldExpression>
@@ -196,7 +196,7 @@
 			<staticText>
 				<reportElement x="0" y="59" width="186" height="11" uuid="176a0690-1976-401c-b2e5-3d5507f17368"/>
 				<textElement textAlignment="Center">
-					<font fontName="DejaVu Sans" size="8" isBold="false"/>
+					<font fontName="DejaVu Sans" size="9" isBold="true"/>
 				</textElement>
 				<text><![CDATA[--------------------------------------------------------------------------------------]]></text>
 			</staticText>
@@ -205,14 +205,14 @@
 					<property name="com.jaspersoft.studio.unit.height" value="mm"/>
 				</reportElement>
 				<textElement textAlignment="Center">
-					<font fontName="DejaVu Sans" size="8" isBold="false"/>
+					<font fontName="DejaVu Sans" size="9" isBold="true"/>
 				</textElement>
 				<text><![CDATA[--------------------------------------------------------------------------------------]]></text>
 			</staticText>
 			<textField>
 				<reportElement x="0" y="0" width="186" height="16" uuid="3c5f98fb-8ff4-4a21-8b6f-39ace24a309e"/>
 				<textElement textAlignment="Center">
-					<font fontName="DejaVu Sans" size="12" isBold="true"/>
+					<font fontName="DejaVu Sans" size="13" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{StoreName}]]></textFieldExpression>
 			</textField>
@@ -300,7 +300,7 @@
 					<property name="com.jaspersoft.studio.unit.height" value="mm"/>
 				</reportElement>
 				<textElement textAlignment="Center">
-					<font fontName="DejaVu Sans" size="8" isBold="false"/>
+					<font fontName="DejaVu Sans" size="9" isBold="true"/>
 				</textElement>
 				<text><![CDATA[--------------------------------------------------------------------------------------]]></text>
 			</staticText>
@@ -311,7 +311,7 @@
 			<textField>
 				<reportElement x="0" y="0" width="10" height="11" uuid="15fea380-f263-4cdb-9bcc-c612637fe632"/>
 				<textElement textAlignment="Left">
-					<font fontName="DejaVu Sans" size="6"/>
+					<font fontName="DejaVu Sans" size="8"/>
 					<paragraph leftIndent="2"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
@@ -319,7 +319,7 @@
 			<textField>
 				<reportElement x="10" y="0" width="176" height="11" uuid="65cb4857-6e5b-412c-bd9f-8d228628ded9"/>
 				<textElement>
-					<font fontName="DejaVu Sans" size="6"/>
+					<font fontName="DejaVu Sans" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{Name}]]></textFieldExpression>
 			</textField>
@@ -329,7 +329,7 @@
 					<property name="com.jaspersoft.studio.unit.width" value="mm"/>
 				</reportElement>
 				<textElement textAlignment="Right">
-					<font fontName="DejaVu Sans" size="6"/>
+					<font fontName="DejaVu Sans" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{Qty}]]></textFieldExpression>
 			</textField>
@@ -338,7 +338,7 @@
 					<property name="com.jaspersoft.studio.unit.height" value="mm"/>
 				</reportElement>
 				<textElement textAlignment="Right">
-					<font fontName="DejaVu Sans" size="6"/>
+					<font fontName="DejaVu Sans" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{Rate}]]></textFieldExpression>
 			</textField>
@@ -347,7 +347,7 @@
 					<property name="com.jaspersoft.studio.unit.height" value="mm"/>
 				</reportElement>
 				<textElement textAlignment="Right">
-					<font fontName="DejaVu Sans" size="6"/>
+					<font fontName="DejaVu Sans" size="8"/>
 					<paragraph rightIndent="2"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{Amount}]]></textFieldExpression>
