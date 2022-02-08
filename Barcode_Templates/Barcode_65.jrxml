@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
-<!-- 2017-12-25T17:38:41 -->
+<!-- Created with Jaspersoft Studio version 6.9.0.final using JasperReports Library version 6.9.0-cb8f9004be492ccc537180b49c026951f4220bf3  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Barcode Sheet" columnCount="5" printOrder="Horizontal" pageWidth="595" pageHeight="842" columnWidth="111" columnSpacing="3" leftMargin="13" rightMargin="13" topMargin="30" bottomMargin="30" uuid="4d6ffc55-4d9c-4f44-8816-918135fa0001">
 	<property name="com.jaspersoft.studio.unit." value="mm"/>
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="BarcodeCSVDatasource.xml"/>
 	<style name="Style1" hImageAlign="Center"/>
+	<parameter name="StoreName" class="java.lang.String"/>
 	<queryString>
 		<![CDATA[]]>
 	</queryString>
@@ -19,7 +19,7 @@
 			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
 			<property name="com.jaspersoft.studio.unit.height" value="mm"/>
 			<textField>
-				<reportElement x="1" y="4" width="109" height="12" uuid="74c115ae-d04f-4107-878e-81c7e2407c9c">
+				<reportElement x="1" y="13" width="109" height="12" uuid="74c115ae-d04f-4107-878e-81c7e2407c9c">
 					<printWhenExpression><![CDATA[$F{ProductName}!=""]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Center">
@@ -28,10 +28,10 @@
 				<textFieldExpression><![CDATA[$F{ProductName}]]></textFieldExpression>
 			</textField>
 			<componentElement>
-				<reportElement style="Style1" x="1" y="16" width="109" height="30" uuid="0b970471-482b-4416-aad5-2c01031aa053">
+				<reportElement style="Style1" x="1" y="26" width="109" height="13" uuid="0b970471-482b-4416-aad5-2c01031aa053">
 					<printWhenExpression><![CDATA[$F{ProductName}!=""]]></printWhenExpression>
 				</reportElement>
-				<jr:barbecue xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" type="EAN13" drawText="true" checksumRequired="false">
+				<jr:barbecue xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" type="Code128" drawText="false" checksumRequired="false">
 					<jr:codeExpression><![CDATA[$F{Barcode}]]></jr:codeExpression>
 				</jr:barbecue>
 			</componentElement>
@@ -43,6 +43,15 @@
 					<font size="8" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA["MRP : "+$F{Price}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1" y="1" width="109" height="12" uuid="ba852d13-ac8b-43ff-8789-5f3362c23e72">
+					<printWhenExpression><![CDATA[$F{ProductName}!=""]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{StoreName}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>

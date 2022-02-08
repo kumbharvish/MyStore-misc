@@ -19,27 +19,27 @@
 			<textField>
 				<reportElement x="0" y="0" width="137" height="16" uuid="1897b082-e54a-466a-9236-858826a017cc"/>
 				<textElement textAlignment="Center">
-					<font fontName="SansSerif" size="8" isBold="true"/>
+					<font fontName="SansSerif" size="9" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{StoreName}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="0" y="12" width="137" height="11" uuid="1d7587db-ab5a-4128-a57d-5f5e4d3e8567"/>
+				<reportElement x="0" y="16" width="137" height="11" uuid="1d7587db-ab5a-4128-a57d-5f5e4d3e8567"/>
 				<textElement textAlignment="Center">
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{ProductName}]]></textFieldExpression>
 			</textField>
 			<componentElement>
-				<reportElement positionType="Float" x="0" y="23" width="137" height="30" uuid="f2207191-ee52-4cf0-8618-bda4525662e2"/>
-				<jr:barbecue xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" type="EAN13" drawText="true" checksumRequired="false">
+				<reportElement positionType="Float" x="0" y="31" width="137" height="17" uuid="f2207191-ee52-4cf0-8618-bda4525662e2"/>
+				<jr:barbecue xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" type="Code128" drawText="false" checksumRequired="false">
 					<jr:codeExpression><![CDATA[$F{Barcode}]]></jr:codeExpression>
 				</jr:barbecue>
 			</componentElement>
 			<textField>
 				<reportElement x="0" y="52" width="137" height="14" uuid="817dca14-dd6b-4f48-a0a6-be2291f2da5c"/>
 				<textElement textAlignment="Center">
-					<font size="8" isBold="true"/>
+					<font size="9" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA["MRP : "+$F{Price}]]></textFieldExpression>
 			</textField>
