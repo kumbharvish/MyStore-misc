@@ -48,7 +48,7 @@
 				<reportElement style="Style1" positionType="Float" x="1" y="46" width="109" height="18" uuid="cba159e6-fa95-47ef-afa6-cbad2ee75986">
 					<printWhenExpression><![CDATA[$F{ProductName}!=""]]></printWhenExpression>
 				</reportElement>
-				<jr:barbecue xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" type="Code128" drawText="false" checksumRequired="false">
+				<jr:barbecue xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" type="Code128" drawText="true" checksumRequired="false">
 					<jr:codeExpression><![CDATA[$F{Barcode}]]></jr:codeExpression>
 				</jr:barbecue>
 			</componentElement>

@@ -31,8 +31,8 @@
 				<textFieldExpression><![CDATA[$F{ProductName}]]></textFieldExpression>
 			</textField>
 			<componentElement>
-				<reportElement positionType="Float" x="0" y="31" width="137" height="17" uuid="f2207191-ee52-4cf0-8618-bda4525662e2"/>
-				<jr:barbecue xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" type="Code128" drawText="false" checksumRequired="false">
+				<reportElement x="10" y="31" width="127" height="20" uuid="f2207191-ee52-4cf0-8618-bda4525662e2"/>
+				<jr:barbecue xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" type="Code128" drawText="true" checksumRequired="false">
 					<jr:codeExpression><![CDATA[$F{Barcode}]]></jr:codeExpression>
 				</jr:barbecue>
 			</componentElement>
