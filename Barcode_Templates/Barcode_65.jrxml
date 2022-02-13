@@ -42,7 +42,7 @@
 				<textElement textAlignment="Center">
 					<font size="8" isBold="true"/>
 				</textElement>
-				<textFieldExpression><![CDATA["MRP : "+$F{Price}]]></textFieldExpression>
+				<textFieldExpression><![CDATA["Price : "+$F{Price}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="1" y="1" width="109" height="12" uuid="ba852d13-ac8b-43ff-8789-5f3362c23e72">
