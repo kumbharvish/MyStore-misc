@@ -19,6 +19,7 @@
 	<field name="Barcode" class="java.lang.String"/>
 	<field name="Price" class="java.lang.String"/>
 	<field name="ProductName" class="java.lang.String"/>
+	<field name="AmountLabel" class="java.lang.String"/>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
@@ -26,37 +27,37 @@
 		<band height="96" splitType="Stretch">
 			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
 			<textField>
-				<reportElement x="1" y="18" width="179" height="12" uuid="74c115ae-d04f-4107-878e-81c7e2407c9c">
+				<reportElement x="1" y="17" width="179" height="12" uuid="74c115ae-d04f-4107-878e-81c7e2407c9c">
 					<printWhenExpression><![CDATA[$F{ProductName}!=""]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Center">
-					<font size="9"/>
+					<font fontName="Arial" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{ProductName}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="1" y="71" width="179" height="14" uuid="da5f429b-13d7-4763-8335-edea59f99f85">
+				<reportElement x="1" y="71" width="179" height="19" uuid="da5f429b-13d7-4763-8335-edea59f99f85">
 					<printWhenExpression><![CDATA[$F{ProductName}!=""]]></printWhenExpression>
 				</reportElement>
-				<textElement textAlignment="Center">
-					<font size="10" isBold="true"/>
+				<textElement textAlignment="Center" markup="html">
+					<font fontName="Arial" size="11" isBold="false"/>
 				</textElement>
-				<textFieldExpression><![CDATA["Price : "+$F{Price}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{AmountLabel}+"<b>"+$F{Price}+"</b>"]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="1" y="0" width="179" height="16" uuid="4d8fbe84-a9a7-44b4-a90b-d98e883c7123">
 					<printWhenExpression><![CDATA[$F{ProductName}!=""]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Center">
-					<font fontName="Times New Roman" size="10" isBold="true"/>
+					<font fontName="Arial" size="11" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{StoreName}]]></textFieldExpression>
 			</textField>
 			<componentElement>
-				<reportElement style="Style1" positionType="Float" x="6" y="36" width="169" height="30" uuid="cba159e6-fa95-47ef-afa6-cbad2ee75986">
+				<reportElement style="Style1" positionType="Float" x="6" y="31" width="169" height="39" uuid="cba159e6-fa95-47ef-afa6-cbad2ee75986">
 					<printWhenExpression><![CDATA[$F{ProductName}!=""]]></printWhenExpression>
 				</reportElement>
-				<jr:barbecue xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" type="Code128" drawText="true" checksumRequired="false">
+				<jr:barbecue xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" type="Code128" drawText="true" checksumRequired="false" barHeight="39">
 					<jr:codeExpression><![CDATA[$F{Barcode}]]></jr:codeExpression>
 				</jr:barbecue>
 			</componentElement>

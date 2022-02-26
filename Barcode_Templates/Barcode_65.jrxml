@@ -11,6 +11,7 @@
 	<field name="Barcode" class="java.lang.String"/>
 	<field name="Price" class="java.lang.String"/>
 	<field name="ProductName" class="java.lang.String"/>
+	<field name="AmountLabel" class="java.lang.String"/>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
@@ -23,15 +24,15 @@
 					<printWhenExpression><![CDATA[$F{ProductName}!=""]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Center">
-					<font size="8"/>
+					<font fontName="Arial" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{ProductName}]]></textFieldExpression>
 			</textField>
 			<componentElement>
-				<reportElement style="Style1" x="1" y="26" width="109" height="17" uuid="0b970471-482b-4416-aad5-2c01031aa053">
+				<reportElement style="Style1" x="10" y="26" width="100" height="17" uuid="0b970471-482b-4416-aad5-2c01031aa053">
 					<printWhenExpression><![CDATA[$F{ProductName}!=""]]></printWhenExpression>
 				</reportElement>
-				<jr:barbecue xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" type="Code128" drawText="true" checksumRequired="false">
+				<jr:barbecue xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" type="Code128" drawText="true" checksumRequired="false" barHeight="28">
 					<jr:codeExpression><![CDATA[$F{Barcode}]]></jr:codeExpression>
 				</jr:barbecue>
 			</componentElement>
@@ -39,17 +40,17 @@
 				<reportElement x="1" y="43" width="109" height="14" uuid="da5f429b-13d7-4763-8335-edea59f99f85">
 					<printWhenExpression><![CDATA[$F{ProductName}!=""]]></printWhenExpression>
 				</reportElement>
-				<textElement textAlignment="Center">
-					<font size="8" isBold="true"/>
+				<textElement textAlignment="Center" markup="html">
+					<font fontName="Arial" size="8" isBold="false"/>
 				</textElement>
-				<textFieldExpression><![CDATA["Price : "+$F{Price}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{AmountLabel}+"<b>"+$F{Price}+"</b>"]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="1" y="1" width="109" height="12" uuid="ba852d13-ac8b-43ff-8789-5f3362c23e72">
 					<printWhenExpression><![CDATA[$F{ProductName}!=""]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Center">
-					<font fontName="SansSerif" size="8" isBold="true"/>
+					<font fontName="Arial" size="9" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{StoreName}]]></textFieldExpression>
 			</textField>
