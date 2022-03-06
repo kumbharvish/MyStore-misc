@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.9.0.final using JasperReports Library version 6.9.0-cb8f9004be492ccc537180b49c026951f4220bf3  -->
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Barcode_50X25MM_Single" pageWidth="108" pageHeight="72" columnWidth="104" leftMargin="2" rightMargin="2" topMargin="2" bottomMargin="2" isSummaryNewPage="true" uuid="9a5e3152-08d6-4275-9780-8b3ef4617755">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Barcode_50X25MM_Single" pageWidth="108" pageHeight="72" columnWidth="108" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" isSummaryNewPage="true" uuid="9a5e3152-08d6-4275-9780-8b3ef4617755">
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
-	<property name="com.jaspersoft.studio.unit." value="inch"/>
-	<property name="com.jaspersoft.studio.unit.topMargin" value="inch"/>
-	<property name="com.jaspersoft.studio.unit.bottomMargin" value="inch"/>
-	<property name="com.jaspersoft.studio.unit.leftMargin" value="inch"/>
-	<property name="com.jaspersoft.studio.unit.rightMargin" value="inch"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="inch"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="inch"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="inch"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="inch"/>
 	<parameter name="StoreName" class="java.lang.String"/>
 	<queryString>
 		<![CDATA[]]>
@@ -19,28 +18,28 @@
 		<band height="66" splitType="Stretch">
 			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
 			<textField>
-				<reportElement x="0" y="0" width="104" height="13" uuid="1897b082-e54a-466a-9236-858826a017cc"/>
+				<reportElement x="0" y="0" width="108" height="13" uuid="1897b082-e54a-466a-9236-858826a017cc"/>
 				<textElement textAlignment="Center">
-					<font fontName="SansSerif" size="10" isBold="true"/>
+					<font fontName="SansSerif" size="9" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{StoreName}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="0" y="14" width="104" height="12" uuid="1d7587db-ab5a-4128-a57d-5f5e4d3e8567"/>
+				<reportElement x="0" y="14" width="108" height="12" uuid="1d7587db-ab5a-4128-a57d-5f5e4d3e8567"/>
 				<textElement textAlignment="Center">
-					<font size="9"/>
+					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{ProductName}]]></textFieldExpression>
 			</textField>
 			<componentElement>
-				<reportElement x="8" y="28" width="94" height="24" uuid="f2207191-ee52-4cf0-8618-bda4525662e2"/>
+				<reportElement x="10" y="28" width="94" height="24" uuid="f2207191-ee52-4cf0-8618-bda4525662e2"/>
 				<jr:barbecue xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" type="Code128" drawText="true" checksumRequired="false" barHeight="42">
 					<jr:codeExpression><![CDATA[$F{Barcode}]]></jr:codeExpression>
 				</jr:barbecue>
 			</componentElement>
 			<textField>
-				<reportElement x="0" y="52" width="104" height="14" uuid="817dca14-dd6b-4f48-a0a6-be2291f2da5c"/>
-				<textElement textAlignment="Center" markup="html">
+				<reportElement x="0" y="52" width="108" height="14" uuid="817dca14-dd6b-4f48-a0a6-be2291f2da5c"/>
+				<textElement textAlignment="Center" markup="styled">
 					<font size="10" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{AmountLabel}+"<b>"+$F{Price}+"</b>"]]></textFieldExpression>
