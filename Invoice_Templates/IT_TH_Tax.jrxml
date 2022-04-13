@@ -7,6 +7,8 @@
 	<parameter name="Address2" class="java.lang.String"/>
 	<parameter name="MobileNumber" class="java.lang.String"/>
 	<parameter name="GSTIN" class="java.lang.String"/>
+	<parameter name="SUBREPORT_DATA" class="java.util.List"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String"/>
 	<field name="Name" class="java.lang.String"/>
 	<field name="Qty" class="java.lang.String"/>
 	<field name="Rate" class="java.lang.String"/>
@@ -24,9 +26,11 @@
 	<field name="CGSTAmount" class="java.lang.String"/>
 	<field name="SGSTAmount" class="java.lang.String"/>
 	<field name="termsCondition" class="java.lang.String"/>
+	<field name="ItemAmt" class="java.lang.String"/>
+	<field name="SubTotalAmountTH" class="java.lang.String"/>
 	<group name="TotalGroup">
 		<groupFooter>
-			<band height="105">
+			<band height="104">
 				<staticText>
 					<reportElement x="4" y="0" width="210" height="11" uuid="e0830128-c59f-42da-af0a-369bf5dbe869">
 						<property name="com.jaspersoft.studio.unit.width" value="mm"/>
@@ -37,23 +41,6 @@
 					</textElement>
 					<text><![CDATA[--------------------------------------------------------------------------------------]]></text>
 				</staticText>
-				<staticText>
-					<reportElement x="4" y="84" width="210" height="11" uuid="465079f9-2f1d-4da7-982b-1145dd2fad14">
-						<property name="com.jaspersoft.studio.unit.width" value="mm"/>
-						<property name="com.jaspersoft.studio.unit.height" value="mm"/>
-					</reportElement>
-					<textElement>
-						<font fontName="DejaVu Sans" size="9" isBold="true"/>
-					</textElement>
-					<text><![CDATA[--------------------------------------------------------------------------------------]]></text>
-				</staticText>
-				<textField isStretchWithOverflow="true">
-					<reportElement x="4" y="95" width="210" height="10" uuid="695cc5ab-db71-419e-8b28-7b9b89cefbb2"/>
-					<textElement textAlignment="Center">
-						<font fontName="DejaVu Sans" size="8" isBold="true"/>
-					</textElement>
-					<textFieldExpression><![CDATA[$F{termsCondition}]]></textFieldExpression>
-				</textField>
 				<staticText>
 					<reportElement x="113" y="11" width="45" height="10" isRemoveLineWhenBlank="true" uuid="88f17dd7-6608-4cbb-afb4-a640efb030d1"/>
 					<textElement textAlignment="Right">
@@ -69,7 +56,7 @@
 						<font fontName="DejaVu Sans" size="8"/>
 						<paragraph rightIndent="2"/>
 					</textElement>
-					<textFieldExpression><![CDATA[$F{TotalAmount}]]></textFieldExpression>
+					<textFieldExpression><![CDATA[$F{SubTotalAmountTH}]]></textFieldExpression>
 				</textField>
 				<staticText>
 					<reportElement x="78" y="21" width="80" height="10" isRemoveLineWhenBlank="true" uuid="32b9758b-9e50-4a36-a617-bbe2b82907b4">
@@ -92,7 +79,7 @@
 					<textFieldExpression><![CDATA[$F{DiscountPer}]]></textFieldExpression>
 				</textField>
 				<staticText>
-					<reportElement x="94" y="71" width="40" height="13" uuid="14d31c11-3ea7-4547-89c4-56b15a1199d9"/>
+					<reportElement x="94" y="44" width="40" height="13" uuid="14d31c11-3ea7-4547-89c4-56b15a1199d9"/>
 					<textElement textAlignment="Right">
 						<font fontName="DejaVu Sans" size="9" isBold="false"/>
 					</textElement>
@@ -119,7 +106,7 @@
 					<textFieldExpression><![CDATA[$F{DiscountAmount}]]></textFieldExpression>
 				</textField>
 				<textField>
-					<reportElement x="134" y="71" width="80" height="13" uuid="50745a58-f193-4886-9793-091c6ea9963d">
+					<reportElement x="134" y="44" width="80" height="13" uuid="50745a58-f193-4886-9793-091c6ea9963d">
 						<property name="com.jaspersoft.studio.unit.rightIndent" value="mm"/>
 						<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					</reportElement>
@@ -128,57 +115,6 @@
 						<paragraph rightIndent="2"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{NetSalesAmount}]]></textFieldExpression>
-				</textField>
-				<textField>
-					<reportElement x="78" y="41" width="80" height="10" isRemoveLineWhenBlank="true" uuid="e7322092-3dd2-41a4-a7c9-26fb18e80691"/>
-					<textElement textAlignment="Right">
-						<font fontName="DejaVu Sans" size="8"/>
-					</textElement>
-					<textFieldExpression><![CDATA[$F{GSTInclusiveFlag}.equalsIgnoreCase( "INCLUSIVE" )?"Total SGST (INCL.) :":"Total SGST :"]]></textFieldExpression>
-				</textField>
-				<textField>
-					<reportElement x="158" y="41" width="56" height="10" isRemoveLineWhenBlank="true" uuid="f32b1495-83f1-49aa-be5b-0684ecb9f689">
-						<property name="com.jaspersoft.studio.unit.rightIndent" value="mm"/>
-					</reportElement>
-					<textElement textAlignment="Right">
-						<font fontName="DejaVu Sans" size="8"/>
-						<paragraph rightIndent="2"/>
-					</textElement>
-					<textFieldExpression><![CDATA[$F{SGSTAmount}]]></textFieldExpression>
-				</textField>
-				<textField>
-					<reportElement x="78" y="51" width="80" height="10" isRemoveLineWhenBlank="true" uuid="6305bc09-8afd-4de8-b96c-04477630ac8e"/>
-					<textElement textAlignment="Right">
-						<font fontName="DejaVu Sans" size="8"/>
-					</textElement>
-					<textFieldExpression><![CDATA[$F{GSTInclusiveFlag}.equalsIgnoreCase( "INCLUSIVE" )?"Total CGST (INCL.) :":"Total CGST :"]]></textFieldExpression>
-				</textField>
-				<textField>
-					<reportElement x="158" y="51" width="56" height="10" isRemoveLineWhenBlank="true" uuid="a37ab10d-1a00-46ac-94c8-6eb0334653df">
-						<property name="com.jaspersoft.studio.unit.rightIndent" value="mm"/>
-					</reportElement>
-					<textElement textAlignment="Right">
-						<font fontName="DejaVu Sans" size="8"/>
-						<paragraph rightIndent="2"/>
-					</textElement>
-					<textFieldExpression><![CDATA[$F{CGSTAmount}]]></textFieldExpression>
-				</textField>
-				<staticText>
-					<reportElement x="78" y="61" width="80" height="10" isRemoveLineWhenBlank="true" uuid="72a9d40e-968b-429c-808a-b6a2cdd940d3"/>
-					<textElement textAlignment="Right">
-						<font fontName="DejaVu Sans" size="8"/>
-					</textElement>
-					<text><![CDATA[Total GST :]]></text>
-				</staticText>
-				<textField>
-					<reportElement x="158" y="61" width="56" height="10" isRemoveLineWhenBlank="true" uuid="8d0815c7-791b-49bc-8592-492eb288dda5">
-						<property name="com.jaspersoft.studio.unit.rightIndent" value="mm"/>
-					</reportElement>
-					<textElement textAlignment="Right">
-						<font fontName="DejaVu Sans" size="8"/>
-						<paragraph rightIndent="2"/>
-					</textElement>
-					<textFieldExpression><![CDATA[$F{GSTAmount}]]></textFieldExpression>
 				</textField>
 				<staticText>
 					<reportElement x="4" y="11" width="32" height="10" isRemoveLineWhenBlank="true" uuid="f2f0a2ee-7331-42af-a180-0756b81fafdf">
@@ -218,6 +154,30 @@
 					</textElement>
 					<textFieldExpression><![CDATA[$F{TotalQty}]]></textFieldExpression>
 				</textField>
+				<staticText>
+					<reportElement x="4" y="58" width="210" height="11" uuid="96645518-abc8-464c-aa2e-e409fd6ba0e0">
+						<property name="com.jaspersoft.studio.unit.width" value="mm"/>
+						<property name="com.jaspersoft.studio.unit.height" value="mm"/>
+					</reportElement>
+					<textElement>
+						<font fontName="DejaVu Sans" size="8" isBold="false"/>
+					</textElement>
+					<text><![CDATA[--------------------------------------------------------------------------------------]]></text>
+				</staticText>
+				<textField>
+					<reportElement isPrintRepeatedValues="false" x="4" y="69" width="210" height="10" isRemoveLineWhenBlank="true" uuid="438f2cf3-0051-4a6e-b6cb-a1a42f1746bd">
+						<printWhenExpression><![CDATA[!$P{GSTIN}.equalsIgnoreCase( "" )]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font fontName="DejaVu Sans" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA["-- Tax Breakup Details -- "]]></textFieldExpression>
+				</textField>
+				<subreport>
+					<reportElement positionType="Float" x="0" y="79" width="221" height="25" uuid="f1efc2ca-e950-4754-9de8-8f1c2feec0c8"/>
+					<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{SUBREPORT_DATA})]]></dataSourceExpression>
+					<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "SR_TH_TAX.jasper"]]></subreportExpression>
+				</subreport>
 			</band>
 		</groupFooter>
 	</group>
@@ -406,7 +366,7 @@
 					<font fontName="DejaVu Sans" size="8"/>
 					<paragraph rightIndent="2"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{Amount}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{ItemAmt}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
